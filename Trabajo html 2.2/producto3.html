@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda - Hombre</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/style1.css">
+</head>
+<body>
+    <header class="bg-dark text-white py-3">
+        <div class="container">
+            <h1><a href="index.html" class="text-white text-decoration-none">Époque</a></h1>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a class="nav-link" href="producto2.html">Niños</a></li>
+                        <li class="nav-item"><a class="nav-link" href="producto3.html">Hombre</a></li>
+                        <li class="nav-item"><a class="nav-link" href="producto4.html">Mujer</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Contacto.html">Contacto</a></li>
+                        </ul>
+                     </div>
+                <div class="container-cart-products hidden-cart">
+                    <div class="row-product hidden">
+                        <div class="cart-product">
+                            <div class="info-cart-product">
+                                <span class="cantidad-producto-carrito">1</span>
+                                <p class="titulo-producto-carrito">Zapatos Nike</p>
+                                <span class="precio-producto-carrito">$80</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart-total hidden">
+                        <h3>Total:</h3>
+                        <span class="total-pagar"></span>
+                    </div>
+                    <p class="cart-empty">El carrito está vacío</p>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container-items">
+        <div class="item" onclick="mostrarModal('Abrigo Largo', '$80', 'https://st.mngbcn.com/rcs/pics/static/T6/fotos/S6/67090504_94.jpg?ts=1574681709606')">
+            <figure>
+                <img src="https://st.mngbcn.com/rcs/pics/static/T6/fotos/S6/67090504_94.jpg?ts=1574681709606" alt="Abrigo Largo">
+            </figure>
+            <div class="info-product">
+                <h2>Abrigo Largo</h2>
+                <p class="price">$80</p>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+
+        <div class="item" onclick="mostrarModal('Pantalón', '$20', 'https://www.bolf.es/data/gfx/pictures/medium/4/3/37134_11.jpg')">
+            <figure>
+                <img src="https://www.bolf.es/data/gfx/pictures/medium/4/3/37134_11.jpg" alt="Pantalón">
+            </figure>
+            <div class="info-product">
+                <h2>Pantalón</h2>
+                <p class="price">$20</p>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+
+        <div class="item" onclick="mostrarModal('Traje Formal', '$140.000', 'https://ae01.alicdn.com/kf/HTB1LzgTai0TMKJjSZFNq6y_1FXaw/De-Vestir-Para-Suit-Homme-Classique-Pantalon-hombre-Office-Formal-Dress-men-Spring-Autumn-Slim-Fit.jpg')">
+            <figure>
+                <img src="https://ae01.alicdn.com/kf/HTB1LzgTai0TMKJjSZFNq6y_1FXaw/De-Vestir-Para-Suit-Homme-Classique-Pantalon-hombre-Office-Formal-Dress-men-Spring-Autumn-Slim-Fit.jpg" alt="Traje Formal">
+            </figure>
+            <div class="info-product">
+                <h2>Traje Formal</h2>
+                <p class="price">$140</p>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+        <!-- Agregar más productos según sea necesario -->
+    </div>
+
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p>&copy; 2024 Époque. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/modal.js"></script>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Detalles del Producto</h2>
+            <img id="modal-image" src="" alt="producto">
+            <div id="modal-info" class="info-product"></div>
+        </div>
+    </div>
+</body>
+</html>

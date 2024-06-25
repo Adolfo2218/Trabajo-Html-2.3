@@ -1,0 +1,199 @@
+/* Reset y Estilos Globales */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    font-family: "Lato", sans-serif;
+    color: #333;
+    min-height: 100vh;
+	background-image: linear-gradient(to right, #262a2b 0%, #8b9fa0 51%, #262a2b 100%);
+
+}
+
+
+
+/* Estilos de Productos y Contenedor de Productos */
+.container-items {
+    margin: 1rem 2vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.item {
+    border-radius: 10px;
+    background: linear-gradient(to bottom, #262a2b, #717f80); 
+    margin: 0.5rem;
+}
+
+.item:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    transition: all 0.5s;
+}
+
+.item figure {
+    overflow: hidden;
+}
+
+.item:hover img {
+    transform: scale(1.2);
+}
+
+.info-product {
+    padding: 15px 30px;
+    line-height: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.info-product button {
+    border: none;
+    background: none;
+    background-color: #000;
+    color: #fff;
+    padding: 15px 10px;
+    cursor: pointer;
+}
+
+.cart-empty {
+    padding: 20px;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Estilos de Carrito de Compras */
+.container-cart-products {
+    color: #adadade3;
+    background-color: rgba(11, 31, 57, .6);
+    width: 400px;
+    z-index: 1;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    right: 1vw;
+    bottom: 30vw;
+    position: absolute;
+}
+
+.cart-product {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.info-cart-product {
+    display: flex;
+    justify-content: space-between;
+    flex: 0.8;
+}
+
+.titulo-producto-carrito {
+    font-size: 20px;
+}
+
+.precio-producto-carrito {
+    font-weight: 700;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.cantidad-producto-carrito {
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.icon-close {
+    width: 25px;
+    height: 25px;
+}
+
+.icon-close:hover {
+    stroke: red;
+    cursor: pointer;
+}
+
+.cart-total {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    gap: 20px;
+}
+
+.cart-total h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #adadade3;
+}
+
+.total-pagar {
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.hidden-cart {
+    display: none;
+}
+
+/* Estilos para el Modal */
+.modal {
+	display: none; /* Ocultamos el modal por defecto */
+	position: fixed;
+	z-index: 999; /* Asegura que el modal esté sobre otros elementos */
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.5); /* Fondo semi-transparente */
+	overflow: auto;
+  }
+  
+  .modal-content {
+	background-color: #fefefe;
+	margin: 15% auto; /* Centra el modal verticalmente */
+	padding: 20px;
+	border: 1px solid #888;
+	width: 80%;
+	max-width: 600px; /* Ancho máximo del modal */
+	position: relative;
+	border-radius: 10px;
+  }
+  
+  .close {
+	color: #aaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+  }
+  

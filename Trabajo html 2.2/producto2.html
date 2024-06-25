@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda - Niños</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/style1.css">
+  <link rel="stylesheet" href="css/modal.css">
+</head>
+<body>
+  <header class="bg-dark text-white py-3">
+    <div class="container">
+      <h1><a href="index.html" class="text-white text-decoration-none">Tienda Ropa</a></h1>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="producto2.html">Niños</a></li>
+            <li class="nav-item"><a class="nav-link" href="producto3.html">Hombre</a></li>
+            <li class="nav-item"><a class="nav-link" href="producto4.html">Mujer</a></li>
+            <li class="nav-item"><a class="nav-link" href="Contacto.html">Contacto</a></li>
+            <!-- Botón del carrito -->
+            <li class="nav-item">
+              <a class="nav-link" href="#" onclick="openCartModal()">
+                <img src="img/cart.png" alt="Carrito de compras" />
+                <span id="contador-productos">0</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container-items">
+    <div class="item">
+      <figure>
+        <img src="https://img.elo7.com.br/product/main/41BF356/camisa-ben-10-desenho-animado-infantil-varias-cores-algodao-surf.jpg" alt="Camiseta Ben 10">
+      </figure>
+      <div class="info-product">
+        <h2>Camiseta Ben 10</h2>
+        <p class="price">$80</p>
+        <button class="btn-add-cart" onclick="addToCart('Camiseta Ben 10', 80)">Añadir al carrito</button>
+      </div>
+    </div>
+    <div class="item">
+      <figure>
+        <img src="https://th.bing.com/th/id/OIP.QX4zrjY49DQifmJStem4CQHaHa?w=198&h=198&c=7&r=0&o=5&pid=1.7" alt="Chaqueta">
+      </figure>
+      <div class="info-product">
+        <h2>Chaqueta</h2>
+        <p class="price">$20</p>
+        <button class="btn-add-cart" onclick="addToCart('Chaqueta', 20)">Añadir al carrito</button>
+      </div>
+    </div>
+    <div class="item">
+      <figure>
+        <img src="https://www.stampalo.es/899295-thickbox_default/mercury-pantalon-de-chandal-nino-club.jpg" alt="Pantalón">
+      </figure>
+      <div class="info-product">
+        <h2>Pantalón de Chándal</h2>
+        <p class="price">$140,000</p>
+        <button class="btn-add-cart" onclick="addToCart('Pantalón de Chándal', 140000)">Añadir al carrito</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-dark text-white text-center py-3 mt-5">
+    <p>&copy; 2024 Tienda Ropa. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Modal para mostrar el carrito -->
+  <div id="cartModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeCartModal()">&times;</span>
+      <h2>Carrito de Compras</h2>
+      <div id="cartItems">
+        <!-- Aquí se mostrarán los elementos del carrito dinámicamente -->
+      </div>
+      <div id="cartTotal" class="cart-total">
+        <h3>Total:</h3>
+        <span class="total-pagar">$0</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="js/cart.js"></script>
+  <script>
+    // Script específico para esta página si es necesario
+  </script>
+</body>
+</html>
